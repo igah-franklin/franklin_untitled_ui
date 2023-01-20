@@ -18,32 +18,32 @@ const SideBar = () => {
         },
         {
             name:'Dashboard',
-            link:'orders',
+            link:'dashboard',
             image:<BarChartIcon/>
         },
         {
             name:'Projects',
-            link:'products',
+            link:'Projects',
             image:<LayerIcon/>
         },
         {
             name:'Tasks',
-            link:'Reporting',
+            link:'tasks',
             image:<CheckIcon/>
         },
         {
             name:'Users',
-            link:'Reporting',
+            link:'users',
             image:<UsersIcon/>
         },
         {
             name:'Support',
-            link:'logout',
+            link:'support',
             image:<LifeBuoyIcon/>
         },
         {
             name:'Settings',
-            link:'logout',
+            link:'settings',
             image:<SettingsIcon/>
         },
     ]

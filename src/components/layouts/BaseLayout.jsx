@@ -8,7 +8,7 @@ const BaseLayout = () => {
     <>
     <SideBar/>
     <div className='main bg-body pl-[18.25rem] overflow-x-hidden'>
-        <div className='main-content h-screen transition duration-300 ease-in-out p-[3rem]'>
+        <div className='main-content h-screen transition duration-300 ease-in-out pt-[1rem] pl-10 pr-10'>
             <TopNav/>
             <Outlet/>
         </div>

@@ -10,10 +10,12 @@ function App() {
       <Routes>
         <Route path="/" element={<BaseLayout/>}>
           <Route index element={<Dashboard/>}/>
-          <Route path="orders" element={<Blank/>}/>
-          <Route path="products" element={<Blank/>}/>
+          <Route path="dashboard" element={<Blank/>}/>
+          <Route path="projects" element={<Blank/>}/>
+          <Route path="tasks" element={<Blank/>}/>
+          <Route path="users" element={<Blank/>}/>
+          <Route path="support" element={<Blank/>}/>
           <Route path="settings" element={<Blank/>}/>
-          <Route path="logout" element={<Blank/>}/>
         </Route>
       </Routes>
     </Router>

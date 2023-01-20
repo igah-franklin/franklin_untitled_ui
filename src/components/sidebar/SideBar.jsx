@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../assets/svg/logo.svg'
 import proileImage from '../../assets/svg/user-profile.svg'
 import {SearchInput, Featurecard} from '../'
+import { BorderLine } from '../../ui-elements'
 
 import {HomeIcon, SettingsIcon, UsersIcon,BarChartIcon,LayerIcon, CheckIcon, LifeBuoyIcon, LogOutIcon} from '../../assets/svg-components'
 
@@ -57,16 +58,16 @@ const SideBar = () => {
             {navElements.map(element=>(
                 <div className='flex flex-start mb-[2rem] gap-4 last:mt-auto'>
                     <span>{element.image}</span>
-                    <NavLink to={element.link} className={({isActive})=> isActive ? 'text-red-500': 'text-gray-700'}>
+                    <span className='text-sm font-normal'><NavLink to={element.link} className={({isActive})=> isActive ? 'bg-sidebarActive': 'bg-sideBar' }>
                     {element.name}
-                </NavLink>
+                </NavLink></span>
                 </div>
             ))}
         </div>
         <div className='ml-2'>
                 <Featurecard/>
         </div>
-        <div><hr className='h-[1px] text-dividerLine my-5' /></div>
+        <BorderLine/>
         <div className='ml-2 flex items-start gap-2'>
                 <img src={proileImage} alt="user" />
                 <div className='text-xsm'>

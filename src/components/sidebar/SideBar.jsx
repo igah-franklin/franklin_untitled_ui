@@ -48,7 +48,7 @@ const SideBar = () => {
         },
     ]
   return (
-    <div className='h-screen w-[17.5rem] bg-sideBar flex flex-col   flex-start fixed top-0 z-[100] p-sm overflow-y-scroll'>
+    <div className='h-screen hidden lg:block lg:w-[17.5rem] bg-sideBar flex flex-col   flex-start fixed top-0 z-[100] p-sm overflow-y-scroll'>
         <div>
             <img src={logo} alt="" />
             <div className='sidebar-close cursor-pointer block md:hidden'><span>X</span></div>

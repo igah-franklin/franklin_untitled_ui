@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .option__item .option__inner{
+            width: 120px;
+            height: 120px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            color: #585c68;
+            border: 5px solid transparent;
+            position: relative;
+        }
+     
+        .option__item .checkbox{
+           background-color: #585c68;
+           position: absolute;
+           top:25px;
+           z-index: 1;
+           
+        }
+        .option__item .checkbox:checked~ .option__inner{
+           background-color: #585c68;
+         
+           
+        }
+        .cover{
+            margin-left: 5rem;
+
+        }
+    </style>
+</head>
+<body>
+    test checkbox
+
+    <form>
+       <div class="cover">
+        <label class="option__item">
+            <input type="checkbox" name="" id="" class="checkbox">
+            <div class="option__inner facebook"> 
+                <div class="icon">x</div>
+            </div>
+            <div class="name">facebook</div>
+           </label>
+       </div>
+    </form>
+</body>
+</html>

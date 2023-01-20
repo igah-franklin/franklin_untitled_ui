@@ -12,4 +12,5 @@ export {default as UsersIcon} from './UsersIcon'
 export {default as MailIcon} from './MailIcon'
 export {default as AddIcon} from './AddIcon'
 export {default as CloudDownloadIcon} from './CloudDownloadIcon'
+
 export {default as LogOutIcon} from './LogOutIcon'

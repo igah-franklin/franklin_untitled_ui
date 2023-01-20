@@ -38,7 +38,9 @@ module.exports = {
         dividerLine:' #EAECF0',
         badge:'#027A48',
         badgeBg:'#ECFDF3',
-        purple:'#7F56D9'
+        purple:'#7F56D9',
+        boldText:'#101828',
+        lightText:'#667085'
        
       },
       boxShadow: {

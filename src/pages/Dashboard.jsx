@@ -127,7 +127,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                 </div>
-                <img src={neutralCheckIcon} alt="" className="-translate-y-2" />
+                <img src={purpleCheckIcon} alt="" className="-translate-y-2" />
               </div>
             </label>
             <label htmlFor="mastercard" className="relative">

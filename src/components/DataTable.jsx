@@ -1,5 +1,5 @@
 import React from "react";
-import { SuccessIcon } from "../assets/svg-components";
+import { SuccessIcon, CloudDownloadIcon } from "../assets/svg-components";
 import userOne from "../assets/svg/user_one.svg";
 import userTwo from "../assets/svg/user_two.svg";
 import userThree from "../assets/svg/user_three.svg";
@@ -10,8 +10,8 @@ const DataTable = () => {
   return (
     <>
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 Capitalize bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table class="w-full text-sm text-left">
+          <thead class="text-[0.75rem] text-[#667085] border-b border-t border-borderLine Capitalize bg-gray-50">
             <tr>
               <th scope="col" class="p-4">
                 <div class="flex items-center">
@@ -28,10 +28,10 @@ const DataTable = () => {
               <th scope="col" class="px-6 py-3">
                 Invoice
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="px-3 py-3">
                 Amount
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="px-3 py-3">
                 Date
               </th>
               <th scope="col" class="px-6 py-3">
@@ -39,6 +39,9 @@ const DataTable = () => {
               </th>
               <th scope="col" class="px-6 py-3">
                 User on plan
+              </th>
+              <th scope="col" class="px-6 py-3">
+              
               </th>
             </tr>
           </thead>
@@ -62,10 +65,10 @@ const DataTable = () => {
               >
                 Basic Plan – Dec 2022
               </th>
-              <td class="px-6 py-4 text-xsm font-light">USD $10.00</td>
-              <td class="px-6 py-4 text-xsm font-light">Dec 1, 2022</td>
-              <td class="px-6 py-4">
-                <p className="flex items-center gap-1 text-xsm text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
+              <td class="px-3 py-4 text-xsm font-light">USD $10.00</td>
+              <td class="px-3 py-4 text-xsm font-light">Dec 1, 2022</td>
+              <td class="px-3 py-4">
+                <p className="w-[3.8rem] justify-center font-normal flex items-center gap-1 text-[0.75rem] text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
                   <span>
                     <SuccessIcon />
                   </span>
@@ -84,6 +87,7 @@ const DataTable = () => {
                   </div>
                 </div>
               </td>
+              <td><CloudDownloadIcon/></td>
             </tr>
             <tr class="bg-white border-b border-borderLine dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 ">
               <td class="w-4 p-4">
@@ -104,10 +108,10 @@ const DataTable = () => {
               >
                 Basic Plan – Dec 2022
               </th>
-              <td class="px-6 py-4 text-xsm font-light">USD $10.00</td>
-              <td class="px-6 py-4 text-xsm font-light">Dec 1, 2022</td>
-              <td class="px-6 py-4">
-                <p className="flex items-center gap-1 text-xsm text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
+              <td class="px-3 py-4 text-xsm font-light">USD $10.00</td>
+              <td class="px-3 py-4 text-xsm font-light">Dec 1, 2022</td>
+              <td class="px-3 py-4">
+                <p className="w-[3.8rem] justify-center font-normal flex items-center gap-1 text-[0.75rem] text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
                   <span>
                     <SuccessIcon />
                   </span>
@@ -126,6 +130,7 @@ const DataTable = () => {
                   </div>
                 </div>
               </td>
+              <td><CloudDownloadIcon/></td>
             </tr>
             <tr class="bg-white border-b border-borderLine dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 ">
               <td class="w-4 p-4">
@@ -146,10 +151,10 @@ const DataTable = () => {
               >
                 Basic Plan – Dec 2022
               </th>
-              <td class="px-6 py-4 text-xsm font-light">USD $10.00</td>
-              <td class="px-6 py-4 text-xsm font-light">Dec 1, 2022</td>
-              <td class="px-6 py-4">
-                <p className="flex items-center gap-1 text-xsm text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
+              <td class="px-3 py-4 text-xsm font-light">USD $10.00</td>
+              <td class="px-3 py-4 text-xsm font-light">Dec 1, 2022</td>
+              <td class="px-3 py-4">
+                <p className="w-[3.8rem] justify-center font-normal flex items-center gap-1 text-[0.75rem] text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
                   <span>
                     <SuccessIcon />
                   </span>
@@ -165,6 +170,7 @@ const DataTable = () => {
                   <img src={userFive} alt="" className="absolute left-[80px]" />
                 </div>
               </td>
+              <td><CloudDownloadIcon/></td>
             </tr>
             <tr class="bg-white border-b border-borderLine dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 ">
               <td class="w-4 p-4">
@@ -185,10 +191,10 @@ const DataTable = () => {
               >
                 Basic Plan – Dec 2022
               </th>
-              <td class="px-6 py-4 text-xsm font-light">USD $10.00</td>
-              <td class="px-6 py-4 text-xsm font-light">Dec 1, 2022</td>
-              <td class="px-6 py-4">
-                <p className="flex items-center gap-1 text-xsm text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
+              <td class="px-3 py-4 text-xsm font-light">USD $10.00</td>
+              <td class="px-3 py-4 text-xsm font-light">Dec 1, 2022</td>
+              <td class="px-3 py-4">
+                <p className="w-[3.8rem] justify-center font-normal flex items-center gap-1 text-[0.75rem] text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
                   <span>
                     <SuccessIcon />
                   </span>
@@ -202,6 +208,7 @@ const DataTable = () => {
                   <img src={userThree} alt="" className="absolute left-10" />
                 </div>
               </td>
+              <td><CloudDownloadIcon/></td>
             </tr>
             <tr class="bg-white border-b border-borderLine dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 ">
               <td class="w-4 p-4">
@@ -222,10 +229,10 @@ const DataTable = () => {
               >
                 Basic Plan – Dec 2022
               </th>
-              <td class="px-6 py-4 text-xsm font-light">USD $10.00</td>
-              <td class="px-6 py-4 text-xsm font-light">Dec 1, 2022</td>
-              <td class="px-6 py-4">
-                <p className="flex items-center gap-1 text-xsm text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
+              <td class="px-3 py-4 text-xsm font-light">USD $10.00</td>
+              <td class="px-3 py-4 text-xsm font-light">Dec 1, 2022</td>
+              <td class="px-3 py-4">
+                <p className="w-[3.8rem] justify-center font-normal flex items-center gap-1 text-[0.75rem] text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
                   <span>
                     <SuccessIcon />
                   </span>
@@ -240,6 +247,7 @@ const DataTable = () => {
                   <img src={userFour} alt="" className="absolute left-[60px]" />
                 </div>
               </td>
+              <td><CloudDownloadIcon/></td>
             </tr>
             <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 ">
               <td class="w-4 p-4">
@@ -260,10 +268,10 @@ const DataTable = () => {
               >
                 Basic Plan – Dec 2022
               </th>
-              <td class="px-6 py-4 text-xsm font-light">USD $10.00</td>
-              <td class="px-6 py-4 text-xsm font-light">Dec 1, 2022</td>
-              <td class="px-6 py-4">
-                <p className="flex items-center gap-1 text-xsm text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
+              <td class="px-3 py-4 text-xsm font-light">USD $10.00</td>
+              <td class="px-3 py-4 text-xsm font-light">Dec 1, 2022</td>
+              <td class="px-3 py-4">
+                <p className="w-[3.8rem] justify-center font-normal flex items-center gap-1 text-[0.75rem] text-[#027A48] bg-[#ECFDF3] py-1 px-2 rounded-full">
                   <span>
                     <SuccessIcon />
                   </span>
@@ -278,6 +286,7 @@ const DataTable = () => {
                   <img src={userFour} alt="" className="absolute left-[60px]" />
                 </div>
               </td>
+              <td><CloudDownloadIcon/></td>
             </tr>
           </tbody>
         </table>

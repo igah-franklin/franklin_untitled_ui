@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/svg/logo.svg";
+import menu from "../../assets/svg/menu.svg";
 import proileImage from "../../assets/svg/user-profile.svg";
 import { SearchInput, Featurecard } from "../";
 import { BorderLine } from "../../ui-elements";
@@ -55,11 +56,11 @@ const SideBar = () => {
     },
   ];
   return (
-    <div className="h-screen hidden lg:block lg:w-[17.5rem] bg-sideBar flex flex-col   flex-start fixed top-0 z-[100] p-sm overflow-y-scroll">
-      <div>
+    <div className="h-screen hidden md:block lg:w-[17.5rem] bg-sideBar flex flex-col   flex-start fixed top-0 z-[100] p-sm overflow-y-scroll">
+      <div className="flex items-center justify-between">
         <img src={logo} alt="" />
-        <div className="sidebar-close cursor-pointer block md:hidden">
-          <span>X</span>
+        <div className="sidebar-close  cursor-pointer block md:hidden">
+          <span><img src={menu} alt="menu" /></span>
         </div>
       </div>
       <div>

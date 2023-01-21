@@ -8,10 +8,14 @@ import purpleCheckIcon from "../assets/svg/purple-check.svg";
 import neutralCheckIcon from "../assets/svg/neutral-check.svg";
 
 const Dashboard = () => {
+
+  const formSubmit = (e)=>{
+    e.preventDefault()
+  }
   return (
     <div className="w-[49.75rem mt-7">
       <ul className="flex items-center text-xsm font-normal">
-        <li className="border border-borderLine px-4 py-2 rounded-bl rounded-tl">
+        <li className="min-w-[7.5rem] border border-borderLine px-4 py-2 rounded-bl rounded-tl">
           My details
         </li>
         <li className="border border-borderLine px-4 py-2">Profile</li>
@@ -98,15 +102,15 @@ const Dashboard = () => {
           </p>
         </div>
         <div className="w-full md:w-2/3 md:ml-[5rem]">
-          <form>
+          <form onSubmit={formSubmit}>
             <label htmlFor="visa" className="relative">
               <input
-                type="checkbox"
-                name="visa"
+                type="radio"
+                name="payment"
                 id="visa"
                 className="peer absolute opacity-[0]"
               />
-              <div className="flex flex-start justify-between gap-5 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked:bg-[#F9F5FF]">
+              <div className="flex flex-start justify-between gap-2 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked:bg-[#F9F5FF]">
                 <div className="flex gap-5">
                   <img
                     src={visaCard}
@@ -121,7 +125,7 @@ const Dashboard = () => {
                       Expiry 06/2024.
                     </p>
 
-                    <div className="text-xsm text-[#667085] font-light">
+                    <div className="text-xsm text-[#667085] font-light ">
                       <button className="text-[#667085]">Set as default</button>
                       <button className="text-[#53389E] ml-3">Edit</button>
                     </div>
@@ -132,12 +136,12 @@ const Dashboard = () => {
             </label>
             <label htmlFor="mastercard" className="relative">
               <input
-                type="checkbox"
-                name="mastercard"
+                type="radio"
+                name="payment"
                 id="mastercard"
                 className="peer absolute opacity-[0]"
               />
-              <div className="flex flex-start justify-between gap-5 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked:bg-[#F9F5FF]">
+              <div className="flex flex-start justify-between gap-2 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked:bg-[#F9F5FF]">
                 <div className="flex gap-5">
                   <img src={mastercard} alt="visacard" />
                   <div className="translate-y-2">

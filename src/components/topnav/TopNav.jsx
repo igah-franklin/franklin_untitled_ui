@@ -8,7 +8,7 @@ const TopNav = () => {
   }
   return (
     <>
-      <div className='w-full bg-sideBar py-5 flex items-center justify-between px-5 lg:hidden'>
+      <div className='w-full bg-sideBar lg:pt-5 pb-5 flex items-center justify-between px-5 lg:hidden'>
         <img src={logo} alt="logo" />
         
         <span onClick={openSidebar} className='cursor-pointer'><img src={menu} alt="menu" /></span>

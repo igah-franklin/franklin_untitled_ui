@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation, Link } from 'react-router-dom'
 
-const Blank = () => {
+const BlankPage = () => {
   const location = useLocation()
   return (
     <div className='h-full grid grid-cols-1 place-items-center'>
@@ -16,4 +16,4 @@ const Blank = () => {
   )
 }
 
-export default Blank
+export default BlankPage

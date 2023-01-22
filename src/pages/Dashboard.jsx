@@ -1,6 +1,7 @@
 import React from "react";
 import DataTable from "../components/DataTable";
 import { BorderLine } from "../ui-elements";
+import CenteredLayout from "../components/layouts/CenteredLayout";
 import { MailIcon, CloudDownloadIcon, AddIcon } from "../assets/svg-components";
 import visaCard from "../assets/svg/visa.svg";
 import mastercard from "../assets/svg/mastercard.svg";
@@ -13,7 +14,8 @@ const Dashboard = () => {
     e.preventDefault()
   }
   return (
-    <div className="w-[49.75rem mt-7">
+    <CenteredLayout>
+    <div className="w-[49.75rem mt-7 z-[100]">
       <ul className="flex items-center text-xsm font-normal">
         <li className="min-w-[7.5rem] border border-borderLine px-4 py-2 rounded-bl rounded-tl">
           My details
@@ -179,6 +181,7 @@ const Dashboard = () => {
       </div>
       <DataTable />
     </div>
+    </CenteredLayout>
   );
 };
 

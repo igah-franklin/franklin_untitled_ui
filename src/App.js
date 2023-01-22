@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BaseLayout from "./components/layouts/BaseLayout";
 import Dashboard from "./pages/Dashboard";
-import Blank from "./pages/Blank";
+import BlankPage from "./pages/BlankPage";
 
 function App() {
   return (
@@ -9,12 +9,12 @@ function App() {
       <Routes>
         <Route path="/" element={<BaseLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="dashboard" element={<Blank />} />
-          <Route path="projects" element={<Blank />} />
-          <Route path="tasks" element={<Blank />} />
-          <Route path="users" element={<Blank />} />
-          <Route path="support" element={<Blank />} />
-          <Route path="settings" element={<Blank />} />
+          <Route path="dashboard" element={<BlankPage />} />
+          <Route path="projects" element={<BlankPage />} />
+          <Route path="tasks" element={<BlankPage />} />
+          <Route path="users" element={<BlankPage />} />
+          <Route path="support" element={<BlankPage />} />
+          <Route path="settings" element={<BlankPage />} />
         </Route>
       </Routes>
     </Router>

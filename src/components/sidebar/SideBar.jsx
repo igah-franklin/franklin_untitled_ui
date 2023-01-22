@@ -78,7 +78,7 @@ const SideBar = () => {
       </div>
       <div className="flex flex-col flex-start grow-1 mt-5 ml-2">
         {navElements.map((element) => (
-          <div onClick={closeSidebar} className="flex flex-start mb-[2rem] gap-4 last:mt-auto">
+          <div onClick={closeSidebar} key={element.name} className="flex flex-start mb-[2rem] gap-4 last:mt-auto">
             <span>{element.image}</span>
             <span className="text-sm font-normal">
               <NavLink

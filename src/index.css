@@ -10,3 +10,26 @@
     transform: scale(0.8) translateX(50%);
     transition: all 0.5s ease-in-out;
 }
+
+
+
+.visa__label .visa:checked~ .visa__inner{
+    background-color: #F9F5FF;
+}
+.visa__label .visa:checked~ .visa__inner .visa__neutral__badge{
+    display: none;
+}
+.visa__label .visa:checked~ .visa__inner .visa__pink__badge{
+    display: block;
+}
+
+
+.mastercard__label .mastercard:checked~ .mastercard__inner{
+    background-color: #F9F5FF;
+}
+.mastercard__label .mastercard:checked~ .mastercard__inner .neutral__badge{
+   display: none;
+}
+.mastercard__label .mastercard:checked~ .mastercard__inner .pink__badge{
+   display: block;
+}

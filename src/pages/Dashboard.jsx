@@ -52,39 +52,42 @@ const Dashboard = () => {
             <div className="flex flex-start gap-5">
               <input
                 type="radio"
-                name=""
-                id=""
-                className="accent-sideBar outline-0  border border-1 border-body"
+                name="email__type"
+                id="email__type__one"
+                className="accent-purple outline-0 rounded-[8px] border border-[#DDDADB]"
               />
-              <div className="translate-y-2">
-                <h3 className="text-[#344054] font-normal text-xsm leading-[1rem]">
-                  Send to my account email
-                </h3>
-                <p className="text-xsm text-[#667085]">
-                  Update your billing details and address.
-                </p>
-              </div>
+              <label htmlFor="email__type__one" className="cursor-pointer">
+                <div className="translate-y-2">
+                  <h3 className="text-[#344054] font-normal text-xsm leading-[1rem]">
+                    Send to my account email
+                  </h3>
+                  <p className="text-xsm text-[#667085]">
+                    Update your billing details and address.
+                  </p>
+                </div>
+              </label>
+              
             </div>
             <div className="flex flex-start gap-5 mt-5">
               <input
                 type="radio"
-                name=""
+                name="email__type"
                 checked
-                id=""
+                id="email__type__other"
                 className="accent-purple outline-0 rounded-[8px] border border-[#DDDADB]"
               />
 
               <div className="flex flex-col translate-y-4">
                 <label
-                  htmlFor="emailHolder"
-                  className="text-[#344054] font-normal text-xsm"
+                  htmlFor="email__type__other"
+                  className="text-[#344054] font-normal text-xsm cursor-pointer"
                 >
                   Send to an alternative email
                 </label>
                 <input
                   type="text"
                   name="emailHolder"
-                  id="emailHolder"
+                  id="email__type"
                   value="billing@untitledui.com"
                   className="lg:w-[30rem] outline-0  mt-2 bg-sideBar border border-1 border-dividerLine pl-8 rounded-[0.375rem] py-1"
                 />
@@ -105,47 +108,18 @@ const Dashboard = () => {
         </div>
         <div className="w-full md:w-2/3 md:ml-[5rem]">
           <form onSubmit={formSubmit}>
-            <label htmlFor="visa" className="relative">
+            
+            <label htmlFor="visa" className="visa__label relative">
               <input
+              checked
                 type="radio"
                 name="payment"
                 id="visa"
-                className="peer absolute opacity-[0]"
+                className="visa peer/card hidden"
               />
-              <div className="flex flex-start justify-between gap-2 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked:bg-[#F9F5FF]">
+              <div className="visa__inner flex flex-start justify-between gap-2 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked/card:bg-[#F9F5FF]">
                 <div className="flex gap-5">
-                  <img
-                    src={visaCard}
-                    alt="visacard"
-                    className="h-[30px] w-[30px] md:h-[40px] md:w-[40px]"
-                  />
-                  <div className="md:translate-y-">
-                    <small className="text-[#344054] font-normal text-xsm leading-[1rem]">
-                      Visa ending in 1234
-                    </small>
-                    <p className="text-xsm text-[#667085;] font-light">
-                      Expiry 06/2024.
-                    </p>
-
-                    <div className="text-xsm text-[#667085] font-light ">
-                      <button className="text-[#667085]">Set as default</button>
-                      <button className="text-[#53389E] ml-3">Edit</button>
-                    </div>
-                  </div>
-                </div>
-                <img src={purpleCheckIcon} alt="" className="-translate-y-2" />
-              </div>
-            </label>
-            <label htmlFor="mastercard" className="relative">
-              <input
-                type="radio"
-                name="payment"
-                id="mastercard"
-                className="peer absolute opacity-[0]"
-              />
-              <div className="flex flex-start justify-between gap-2 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked:bg-[#F9F5FF]">
-                <div className="flex gap-5">
-                  <img src={mastercard} alt="visacard" />
+                  <img src={visaCard} alt="visacard" className="" />
                   <div className="translate-y-2">
                     <small className="text-[#344054] font-normal text-xsm leading-[1rem]">
                       Visa ending in 1234
@@ -160,9 +134,40 @@ const Dashboard = () => {
                     </div>
                   </div>
                 </div>
-                <img src={neutralCheckIcon} alt="" className="-translate-y-2" />
+                <img src={neutralCheckIcon} alt="" className="visa__neutral__badge -translate-y-2" />
+                <img src={purpleCheckIcon} alt="" className="hidden visa__pink__badge -translate-y-2" />
               </div>
             </label>
+            <label htmlFor="mastercard" className="mastercard__label relative">
+              <input
+                type="radio"
+                name="payment"
+                id="mastercard"
+                className="mastercard peer/card hidden"
+              />
+              <div className="mastercard__inner flex flex-start justify-between gap-2 border border-[#D6BBFB] px-10 py-5 rounded-[8px] mt-5 cursor-pointer peer-checked/card:bg-[#F9F5FF]">
+                <div className="flex gap-5">
+                  <img src={mastercard} alt="visacard" className="" />
+                  <div className="translate-y-2">
+                    <small className="text-[#344054] font-normal text-xsm leading-[1rem]">
+                      Visa ending in 1234
+                    </small>
+                    <p className="text-xsm text-[#667085;] font-light">
+                      Expiry 06/2024.
+                    </p>
+
+                    <div className="text-xsm text-[#667085] font-light">
+                      <button className="text-[#667085]">Set as default</button>
+                      <button className="text-[#53389E] ml-3">Edit</button>
+                    </div>
+                  </div>
+                </div>
+                <img src={neutralCheckIcon} alt="" className="neutral__badge -translate-y-2" />
+                <img src={purpleCheckIcon} alt="" className="hidden pink__badge -translate-y-2" />
+              </div>
+            </label>
+          
+           
             <div className="flex flex-start items-center gap-5 text-[ #667085] mt-5">
               <AddIcon />
               <p>Add new payment method</p>

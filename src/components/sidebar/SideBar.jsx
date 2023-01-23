@@ -55,32 +55,34 @@ const SideBar = () => {
       image: <SettingsIcon />,
     },
   ];
-  const closeSidebar = ()=>{
-    document.querySelector('.main-content').style.transform = 'scale(1) translateX(0)'
-    setTimeout(()=>{
-        document.body.classList.remove('open-sidebar')
-        document.querySelector('.main-content').style = ''
-    },500)
-
-    
-}
+  const closeSidebar = () => {
+    document.querySelector(".main-content").style.transform =
+      "scale(1) translateX(0)";
+    setTimeout(() => {
+      document.body.classList.remove("open-sidebar");
+      document.querySelector(".main-content").style = "";
+    }, 500);
+  };
   return (
     <div className="h-screen w-full lg:w-[17.5rem] bg-sideBar flex flex-col   flex-start fixed top-0 z-[100] p-sm overflow-y-scroll">
       <div className="flex items-center justify-between">
         <img src={logo} alt="" />
         <div className="sidebar-close  cursor-pointer block md:hidden">
-         
           {/* <span onClick={closeSidebar}>x</span> */}
         </div>
       </div>
       <div>
         <SearchInput />
       </div>
-      <div className="flex flex-col flex-start grow-1 mt-5 ml-2">
-        {navElements.map((element) => (
-          <div onClick={closeSidebar} key={element.name} className="flex flex-start mb-[2rem] gap-4 last:mt-auto">
+      <div className="w-full flex flex-col flex-start grow-1 mt-5 ml-2">
+        {navElements.map((element, index) => (
+          <div
+            onClick={closeSidebar}
+            key={element.name}
+            className="w-full flex flex-star mb-[1.5rem] gap-4 last:mt-auto"
+          >
             <span>{element.image}</span>
-            <span className="text-sm font-normal">
+            <span className="w-full text-sm font-normal flex items-center justify-between">
               <NavLink
                 to={element.link}
                 className={({ isActive }) =>
@@ -90,6 +92,13 @@ const SideBar = () => {
                 {element.name}
               </NavLink>
             </span>
+            {index === 1 ? (
+              <small className="text-xsm text-[#344054] bg-[#F2F4F7] py- px-2 rounded-full">
+                10
+              </small>
+            ) : (
+              ""
+            )}
           </div>
         ))}
       </div>

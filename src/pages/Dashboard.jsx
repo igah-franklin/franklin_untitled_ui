@@ -42,7 +42,7 @@ const Dashboard = () => {
             API
           </li>
         </ul>
-        <ul className="md:hidden">
+        <ul className="text-xsm font-normal md:hidden">
           <Slider {...settings}>
             <li className="border border-borderLine px-4 py-2">Profile</li>
             <li className="border border-borderLine px-4 py-2">Password</li>

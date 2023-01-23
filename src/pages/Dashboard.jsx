@@ -1,4 +1,9 @@
 import React from "react";
+import Slider from "react-slick";
+
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import DataTable from "../components/DataTable";
 import { BorderLine } from "../ui-elements";
 import CenteredLayout from "../components/layouts/CenteredLayout";
@@ -12,10 +17,17 @@ const Dashboard = () => {
   const formSubmit = (e) => {
     e.preventDefault();
   };
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
   return (
     <CenteredLayout>
       <div className="w-[49.75rem mt-7 z-[100]">
-        <ul className="flex items-center text-xsm font-normal">
+        <ul className="flex items-center text-xsm font-normal hidden md:flex">
           <li className="min-w-[7.5rem] border border-borderLine px-4 py-2 rounded-bl rounded-tl">
             My details
           </li>
@@ -29,6 +41,22 @@ const Dashboard = () => {
           <li className="border border-borderLine px-4 py-2 rounded-br rounded-tr">
             API
           </li>
+        </ul>
+        <ul className="md:hidden">
+          <Slider {...settings}>
+            <li className="border border-borderLine px-4 py-2">Profile</li>
+            <li className="border border-borderLine px-4 py-2">Password</li>
+            <li className="border border-borderLine px-4 py-2">Team</li>
+            <li className="border border-borderLine px-4 py-2">Plan</li>
+            <li className="border border-borderLine px-4 py-2">Billing</li>
+            <li className="border border-borderLine px-4 py-2">
+              Notifications
+            </li>
+            <li className="border border-borderLine px-4 py-2">Integrations</li>
+            <li className="border border-borderLine px-4 py-2 rounded-br rounded-tr">
+              API
+            </li>
+          </Slider>
         </ul>
         <div className="mt-[2rem]">
           <h3 className="text-boldText font-normal text-[1.125rem]">
